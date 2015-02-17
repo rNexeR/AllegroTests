@@ -1,6 +1,7 @@
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
 
+#include <vector>
 #include <iostream>
 using namespace std;
 
@@ -16,9 +17,11 @@ const float var = 7.0;
 class Personaje
 {
     public:
-        ALLEGRO_BITMAP  *image   = NULL;
+        vector<ALLEGRO_BITMAP*> image;
         ALLEGRO_TIMER *timer = NULL;
         float image_x = 0.0, image_y = 0.0;
+        int animacion = 0;
+        int frame = 0;
 
         bool key[4] = { false, false, false, false };
 

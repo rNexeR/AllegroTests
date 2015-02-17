@@ -15,8 +15,11 @@ Personaje::Personaje(ALLEGRO_EVENT_QUEUE *event_queue)
         cout<<"failed to create timer!"<<endl;
     }
 
-    image = al_load_bitmap("image.png");
-    if(!image) {
+    image.push_back(al_load_bitmap("Sprites/1.png"));
+    image.push_back(al_load_bitmap("Sprites/2.png"));
+    image.push_back(al_load_bitmap("Sprites/3.png"));
+    image.push_back(al_load_bitmap("Sprites/4.png"));
+    if(!image[0]) {
       cout<<"failed to load image!"<<endl;
     }
 
@@ -31,7 +34,6 @@ Personaje::~Personaje()
 }
 
 void Personaje::act(ALLEGRO_EVENT ev){
-    //cout<<"Estado: "<<key[KEY_UP]<<endl;
 
 
             if(key[KEY_UP]) {
@@ -91,9 +93,16 @@ void Personaje::act(ALLEGRO_EVENT ev){
 }
 
 void Personaje::draw(){
-    al_draw_scaled_bitmap(image,0,0,400,400,image_x,image_y,200,200,0);
+    if (frame%3==0){
+        animacion++;
+        if (animacion>=image.size())
+            animacion = 0;
+    }
+
+    al_draw_scaled_bitmap(image[animacion],0,0,400,400,image_x,image_y,200,200,0);
+    frame++;
 }
 
 void Personaje::destroy(){
-    al_destroy_bitmap(image);
+    al_destroy_bitmap(image[0]);
 }

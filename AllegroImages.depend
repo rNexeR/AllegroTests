@@ -14,3 +14,19 @@
 1424194242 source:/home/rnexer/Programacion 3/AllegroImages/Personaje.cpp
 	"Personaje.h"
 
+1424194903 source:/home/rnexer/Programacion 3/AllegroTests/main.cpp
+	<stdio.h>
+	<iostream>
+	<allegro5/allegro.h>
+	"allegro5/allegro_image.h"
+	"Personaje.h"
+
+1424196006 /home/rnexer/Programacion 3/AllegroTests/Personaje.h
+	<vector>
+	<iostream>
+	<allegro5/allegro.h>
+	"allegro5/allegro_image.h"
+
+1424196409 source:/home/rnexer/Programacion 3/AllegroTests/Personaje.cpp
+	"Personaje.h"
+
