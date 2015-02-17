@@ -1,7 +1,16 @@
 # depslib dependency file v1.0
-1424108760 source:/home/rnexer/Programacion 3/AllegroImages/main.cpp
+1424194781 source:/home/rnexer/Programacion 3/AllegroImages/main.cpp
 	<stdio.h>
 	<iostream>
 	<allegro5/allegro.h>
 	"allegro5/allegro_image.h"
+	"Personaje.h"
+
+1424194891 /home/rnexer/Programacion 3/AllegroImages/Personaje.h
+	<iostream>
+	<allegro5/allegro.h>
+	"allegro5/allegro_image.h"
+
+1424194242 source:/home/rnexer/Programacion 3/AllegroImages/Personaje.cpp
+	"Personaje.h"
 
