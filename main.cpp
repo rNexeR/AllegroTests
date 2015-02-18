@@ -4,6 +4,7 @@ using namespace std;
 #include <allegro5/allegro.h>
 #include "allegro5/allegro_image.h"
 #include "Sho.h"
+#include "ShoRojo.h"
 
 
 
@@ -38,6 +39,7 @@ int main(int argc, char **argv){
    al_flip_display();
 
     Sho* per = new Sho(event_queue);
+    ShoRojo* perojo = new ShoRojo(event_queue);
 
    while(1)
    {
@@ -53,10 +55,12 @@ int main(int argc, char **argv){
             break;
         }
     per->act(ev);
+    perojo->act(ev);
 
       al_clear_to_color(al_map_rgb(150,0,255));
       //cout<<"Dibujando Imagen"<<endl;
     per->draw();
+    perojo->draw();
       al_flip_display();
    }
 

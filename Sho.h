@@ -18,7 +18,6 @@ using namespace std;
 class Sho : public Personaje
 {
     public:
-
         Sho(ALLEGRO_EVENT_QUEUE *event_queue);
         void act(ALLEGRO_EVENT ev);
         virtual ~Sho();
