@@ -32,6 +32,7 @@ class Personaje
         virtual void act(ALLEGRO_EVENT ev) = 0;
         void draw();
         void destroy();
+        bool Colision(Personaje p);
         virtual ~Personaje();
     protected:
     private:
