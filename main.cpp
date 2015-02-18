@@ -3,7 +3,7 @@
 using namespace std;
 #include <allegro5/allegro.h>
 #include "allegro5/allegro_image.h"
-#include "Personaje.h"
+#include "Sho.h"
 
 
 
@@ -37,7 +37,7 @@ int main(int argc, char **argv){
 
    al_flip_display();
 
-    Personaje* per = new Personaje(event_queue);
+    Sho* per = new Sho(event_queue);
 
    while(1)
    {
