@@ -36,6 +36,8 @@
 		<Unit filename="Personaje.h" />
 		<Unit filename="Sho.cpp" />
 		<Unit filename="Sho.h" />
+		<Unit filename="ShoRojo.cpp" />
+		<Unit filename="ShoRojo.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

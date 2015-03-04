@@ -1,6 +1,6 @@
 #include "Sho.h"
 
-Sho::Sho(ALLEGRO_EVENT_QUEUE *event_queue)
+Sho::Sho(ALLEGRO_EVENT_QUEUE *event_queue, list<Personaje *> *personajes)
 {
     if(!al_install_keyboard()) {
       cout<<"failed to initialize the keyboard!"<<endl;
@@ -25,29 +25,32 @@ Sho::Sho(ALLEGRO_EVENT_QUEUE *event_queue)
 
     al_register_event_source(event_queue, al_get_keyboard_event_source());
     al_register_event_source(event_queue, al_get_timer_event_source(timer));
+
+    init(personajes);
 }
 
-void Sho::act(ALLEGRO_EVENT ev){
-
+void Sho::act(ALLEGRO_EVENT* ev){
+    //cout<<"Sho Actuando"<<endl;
 
             if(key[KEY_UP]) {
-                image_y -= var;
+                cout<<"Arriba"<<endl;
+                caja->y -= var;
             }
 
             if(key[KEY_DOWN]) {
-                image_y += var;
+                caja->y += var;
             }
 
             if(key[KEY_LEFT]) {
-                image_x -= var;
+                caja->x -= var;
             }
 
             if(key[KEY_RIGHT]) {
-                image_x += var;
+                caja->x += var;
             }
 
-        if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
-         switch(ev.keyboard.keycode) {
+        if(ev->type == ALLEGRO_EVENT_KEY_DOWN) {
+         switch(ev->keyboard.keycode) {
             case ALLEGRO_KEY_UP:
                key[KEY_UP] = true;
                break;
@@ -65,8 +68,8 @@ void Sho::act(ALLEGRO_EVENT ev){
                break;
          }
       }
-      if(ev.type == ALLEGRO_EVENT_KEY_UP) {
-         switch(ev.keyboard.keycode) {
+      if(ev->type == ALLEGRO_EVENT_KEY_UP) {
+         switch(ev->keyboard.keycode) {
             case ALLEGRO_KEY_UP:
                key[KEY_UP] = false;
                break;

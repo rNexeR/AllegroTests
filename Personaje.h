@@ -4,9 +4,11 @@
 #include <vector>
 #include <iostream>
 using namespace std;
+#include "Box.h"
 
 #include <allegro5/allegro.h>
 #include "allegro5/allegro_image.h"
+#include <list>
 
 
 
@@ -21,7 +23,11 @@ class Personaje
 
         vector<ALLEGRO_BITMAP*> image;
         ALLEGRO_TIMER *timer = NULL;
-        float image_x = 0.0, image_y = 0.0;
+        Box* caja = new Box(0,0,0,0);
+        list<Personaje *> *personajes;
+        bool colisionado;
+
+        //float image_x = 0.0, image_y = 0.0;
         int animacion = 0;
         int frame = 0;
 
@@ -29,10 +35,11 @@ class Personaje
 
 
         Personaje();
-        virtual void act(ALLEGRO_EVENT ev) = 0;
+        virtual void act(ALLEGRO_EVENT* ev) =0;
         void draw();
+        void init(list<Personaje *> *personajes);
         void destroy();
-        bool Colision(Personaje p);
+        bool Colision(Box* pCaja);
         virtual ~Personaje();
     protected:
     private:

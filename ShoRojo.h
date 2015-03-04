@@ -12,8 +12,8 @@ using namespace std;
 class ShoRojo : public Personaje
 {
     public:
-        ShoRojo(ALLEGRO_EVENT_QUEUE *event_queue);
-        void act(ALLEGRO_EVENT ev);
+        ShoRojo(ALLEGRO_EVENT_QUEUE *event_queue, list<Personaje*> *personajes);
+        void act(ALLEGRO_EVENT* ev);
         virtual ~ShoRojo();
     protected:
     private:

@@ -18,8 +18,8 @@ using namespace std;
 class Sho : public Personaje
 {
     public:
-        Sho(ALLEGRO_EVENT_QUEUE *event_queue);
-        void act(ALLEGRO_EVENT ev);
+        Sho(ALLEGRO_EVENT_QUEUE *event_queue, list<Personaje*> *personajes);
+        void act(ALLEGRO_EVENT* ev);
         virtual ~Sho();
     protected:
     private:

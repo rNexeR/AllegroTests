@@ -14,37 +14,48 @@
 1424194242 source:/home/rnexer/Programacion 3/AllegroImages/Personaje.cpp
 	"Personaje.h"
 
-1424292520 source:/home/rnexer/Programacion 3/AllegroTests/main.cpp
+1425432559 source:/home/rnexer/Programacion 3/AllegroTests/main.cpp
 	<stdio.h>
 	<iostream>
+	<list>
 	<allegro5/allegro.h>
 	"allegro5/allegro_image.h"
 	"Sho.h"
 	"ShoRojo.h"
 
-1424291102 /home/rnexer/Programacion 3/AllegroTests/Personaje.h
+1425432472 /home/rnexer/Programacion 3/AllegroTests/Personaje.h
 	<vector>
 	<iostream>
+	"Box.h"
 	<allegro5/allegro.h>
 	"allegro5/allegro_image.h"
+	<list>
 
-1424281486 source:/home/rnexer/Programacion 3/AllegroTests/Personaje.cpp
+1425432353 source:/home/rnexer/Programacion 3/AllegroTests/Personaje.cpp
 	"Personaje.h"
 
-1424281486 source:/home/rnexer/Programacion 3/AllegroTests/Sho.cpp
+1425432611 source:/home/rnexer/Programacion 3/AllegroTests/Sho.cpp
 	"Sho.h"
 
-1424292181 /home/rnexer/Programacion 3/AllegroTests/Sho.h
+1425432527 /home/rnexer/Programacion 3/AllegroTests/Sho.h
 	<vector>
 	<iostream>
 	"Personaje.h"
 	<allegro5/allegro.h>
 	"allegro5/allegro_image.h"
 
-1424292374 /home/rnexer/Programacion 3/AllegroTests/ShoRojo.h
+1425432656 /home/rnexer/Programacion 3/AllegroTests/ShoRojo.h
 	<vector>
 	<iostream>
 	"Personaje.h"
 	<allegro5/allegro.h>
 	"allegro5/allegro_image.h"
+
+1425431642 source:/home/rnexer/Programacion 3/AllegroTests/ShoRojo.cpp
+	"ShoRojo.h"
+
+1425431306 source:/home/rnexer/Programacion 3/AllegroTests/Box.cpp
+	"Box.h"
+
+1425431319 /home/rnexer/Programacion 3/AllegroTests/Box.h
 
